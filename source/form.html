@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип">
+        <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="page-main__title">Подбор программы</h1>
+
+      <section class="picking">
+        <div class="picking__wrapper">
+          <h2 class="picking__title">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+          <form class="picking__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="picking__fieldset">
+              <legend class="visually-hidden">Общая информация</legend>
+              <label class="picking__label">
+                Имя:*
+                <input class="picking__input" type="text" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="picking__label">
+                Вес (кг):*
+                <input class="picking__input" type="text" name="weight" placeholder="7" required>
+              </label>
+              <label class="picking__label">
+                Возраст:
+                <input class="picking__input" type="text" name="age" placeholder="7">
+              </label>
+            </fieldset>
+            <fieldset class="picking__fieldset picking__fieldset--goal">
+              <legend class="visually-hidden">Цель программы</legend>
+              <label class="picking__label picking__label--radio">
+                <input class="visually-hidden" type="radio" name="goal" value="losing" checked>
+                Похудение
+              </label>
+              <label class="picking__label picking__label--radio">
+                <input class="visually-hidden" type="radio" name="goal" value="gaining">
+                Набор массы
+              </label>
+              <label class="picking__label picking__label--radio">
+                <input class="visually-hidden" type="radio" name="goal" value="dont know">
+                Не знаю (нужен ваш совет)
+              </label>
+            </fieldset>
+            <fieldset class="picking__fieldset">
+              <legend class="picking__legend">Контактные данные (владельца кота)</legend>
+              <label class="picking__label">
+                E-mail:*
+                <input class="picking__input picking__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="picking__label">
+                Телефон:*
+                <input class="picking__input picking__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </fieldset>
+            <fieldset class="picking__fieldset">
+              <legend class="picking__legend">Комментарий</legend>
+              <label class="visually-hidden">
+                О коте
+                <textarea name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </label>
+            </fieldset>
+            <fieldset class="picking__fieldset">
+              <legend class="picking__legend">Дополнительно</legend>
+              <label class="picking__label picking__label--checkbox">
+                <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                Сахарозаменитель
+              </label>
+              <label class="picking__label picking__label--checkbox">
+                <input class="visually-hidden" type="checkbox" name="water">
+                Питьевая вода
+              </label>
+              <label class="picking__label picking__label--checkbox">
+                <input class="visually-hidden" type="checkbox" name="milk">
+                Молоко
+              </label>
+              <label class="picking__label picking__label--checkbox">
+                <input class="visually-hidden" type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </fieldset>
+            <button class="picking__button button" type="submit">Отправить заявку</button>
+            <small class="picking__note">* — Обязательные поля</small>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts contacts">
+          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <img class="page-footer__map" src="http://placehold.it/320x364" width="320" height="364" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип">
+          <img class="page-footer__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">Кэт Энерджи в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--inst" href="#">Кэт Энерджи в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="#">Кэт Энерджи в Фэйсбуке</a>
+            </li>
+          </ul>
+        </div>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <img class="page-footer__copyright-logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
