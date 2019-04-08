@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  max-width: 280px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+
+  background-color: @green;
+
+  .oswald-regular(14px;18px;#fff);
+  .uppercase();
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: @green--down;
+}
+
+.button:active {
+  background-color: @green--down;
+  color: @white--down;
+}
+
+.button--grey {
+  background-color: @light-grey;
+  color: @grey;
+}
+
+.button--grey:hover,
+.button--grey:focus {
+  background-color: @light-grey--down;
+}
+
+.button--grey:active {
+  background-color: @light-grey--down;
+  color: @grey--down;
+}

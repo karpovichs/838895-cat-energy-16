@@ -1,0 +1,37 @@
+@white: #fff;
+@white--hover: rgba(255,255,255,0.6);
+@white--down: rgba(255,255,255,0.3);
+
+@black: #000;
+@black--hover: rgba(0,0,0,0.6);
+@black--down: rgba(0,0,0,0.3);
+
+@light-grey: #f2f2f2;
+@light-grey--down: #ebebeb;
+
+@grey: #444;
+@grey--hover: rgba(68,68,68,0.6);
+@grey--down: rgba(68,68,68,0.3);
+
+@green: #68b738;
+@green--down: #5eaa2f;
+
+.uppercase() {
+  text-transform: uppercase;
+}
+
+.oswald-regular(@font-size: 20px; @line-height: 20px; @color: #000) {
+  font-family: Oswald;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+}
+
+.oswald-medium(@font-size: 20px; @line-height: 20px; @color: #000) {
+  font-family: Oswald;
+  font-weight: 500;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+}

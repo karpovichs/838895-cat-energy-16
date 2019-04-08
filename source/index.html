@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -15,15 +16,15 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
+          <ul class="main-nav__list nav-list no-marker">
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--active">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -46,7 +47,7 @@
       <section class="program">
         <div class="program__wrapper">
           <h2 class="visually-hidden">Каталог программ</h2>
-          <ul class="program__list">
+          <ul class="program__list no-marker">
             <li class="program__item">
               <h3 class="program__name program__name--losing">Похудение</h3>
               <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -64,7 +65,7 @@
       <section class="about">
         <div class="about__wrapper">
           <h2 class="about__title">Как это работает</h2>
-          <ul class="about__list">
+          <ul class="about__list no-marker">
             <li class="about__item">
               <div class="about__icon">
                 <img class="about__icon-image about__icon-image--nutrient" src="http://placehold.it/26x29" width="26" height="29" alt="Иконка с питательными веществами">
@@ -97,7 +98,7 @@
         <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list">
+          <ul class="example__list no-marker">
             <li class="example__item">
               <b class="example__number">5 кг</b>
               <p class="example__description">снижение веса</p>
@@ -107,8 +108,10 @@
               <p class="example__description">затрачено времени</p>
             </li>
           </ul>
-          <b class="example__cost example__cost--text">Затраты на питание:</b>
-          <b class="example__cost example__cost--number">15 000 руб.</b>
+          <div class="example__cost-wrapper">
+            <b class="example__cost example__cost--text">Затраты на питание:</b>
+            <b class="example__cost example__cost--number">15 000 руб.</b>
+          </div>
           <img class="example__image" src="http://placehold.it/311x232" width="311" height="232" alt="Борис до и после">
           <div class="example__toggle">
             <span class="example__toggle-label example__toggle-label--before">Было</span>
@@ -122,19 +125,22 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
+        <div class="page-footer__contacts contacts contacts--white">
           <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <img class="page-footer__map" src="http://placehold.it/320x364" width="320" height="364" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <div class="page-footer__map">
+          <img class="page-footer__map-image" src="http://placehold.it/320x364" width="320" height="364" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </div>
         <a class="page-footer__logo">
-          <img class="page-footer__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип">
-          <img class="page-footer__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
+          <img class="page-footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип Кэт Энерджи">
         </a>
         <div class="page-footer__social social">
-          <ul class="social__list">
+          <ul class="social__list no-marker">
             <li class="social__item">
-              <a class="social__link social__link--vk" href="#">Кэт Энерджи в Вконтакте</a>
+              <a class="social__link social__link--vk" href="#">
+                Кэт Энерджи в Вконтакте
+              </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--inst" href="#">Кэт Энерджи в Инстаграме</a>
