@@ -1,0 +1,42 @@
+.button {
+  display: block;
+  max-width: 280px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+
+  font-family: @font-oswald;
+  font-size: 14px;
+  line-height: (18 / 14) * 1em;
+  color: @white;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: @green;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @green--down;
+  }
+
+  &:active {
+    background-color: @green--down;
+    color: @white--down;
+  }
+
+  &--grey {
+    background-color: @light-grey;
+    color: @grey;
+
+    &:hover,
+    &:focus {
+      background-color: @light-grey--down;
+    }
+
+    &:active {
+      background-color: @light-grey--down;
+      color: @grey--down;
+    }
+  }
+}
