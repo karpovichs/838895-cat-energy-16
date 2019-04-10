@@ -1,3 +1,7 @@
+.nav-list {
+  .no-list;
+}
+
 .nav-list__item {
   padding-top: 22px;
   padding-bottom: 23px;
@@ -6,16 +10,20 @@
 }
 
 .nav-list__link {
-  .oswald-medium(20px;20px;@black);
-  .uppercase();
+  font-family: @font-oswald;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1em;
+  color: @black;
+  text-transform: uppercase;
   text-decoration: none;
-}
 
-.nav-list__link:hover,
-.nav-list__link:focus {
-  color: @black--hover;
-}
+  &:hover,
+  &:focus {
+    color: @black--hover;
+  }
 
-.nav-list__link:active {
-  color: @black--down;
+  &:active {
+    color: @black--down;
+  }
 }

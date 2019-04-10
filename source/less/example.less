@@ -9,7 +9,10 @@
   margin: 0;
   margin-bottom: 28px;
 
-  .oswald-regular(36px;60px;@black);
+  font-family: @font-oswald;
+  font-size: 36px;
+  line-height: (60 / 36) * 1em;
+  color: @black;
 }
 
 .example__text {
@@ -19,6 +22,8 @@
 
 .example__list {
   margin-bottom: 20px;
+
+  .no-list;
 }
 
 .example__item {
@@ -34,8 +39,11 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  .oswald-regular(24px;24px;@black);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 24px;
+  line-height: 1em;
+  color: @black;
+  text-transform: uppercase;
   text-align: center;
 
   border: 1px solid #cdcdcd;
@@ -61,11 +69,17 @@
 }
 
 .example__cost {
-  .oswald-regular(14px;20px;@black);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 14px;
+  line-height: (20 / 14) * 1em;
+  color: @black;
+  text-transform: uppercase;
 }
 
 .example__toggle-label {
-  .oswald-regular(16px;20px;@black);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 16px;
+  line-height: (20 / 16) * 1em;
+  color: @black;
+  text-transform: uppercase;
 }

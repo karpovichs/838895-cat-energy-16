@@ -4,35 +4,39 @@
   padding-top: 14px;
   padding-bottom: 11px;
 
-  background-color: @green;
-
-  .oswald-regular(14px;18px;#fff);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 14px;
+  line-height: (18 / 14) * 1em;
+  color: @white;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-}
 
-.button:hover,
-.button:focus {
-  background-color: @green--down;
-}
+  background-color: @green;
+  cursor: pointer;
 
-.button:active {
-  background-color: @green--down;
-  color: @white--down;
-}
+  &:hover,
+  &:focus {
+    background-color: @green--down;
+  }
 
-.button--grey {
-  background-color: @light-grey;
-  color: @grey;
-}
+  &:active {
+    background-color: @green--down;
+    color: @white--down;
+  }
 
-.button--grey:hover,
-.button--grey:focus {
-  background-color: @light-grey--down;
-}
+  &--grey {
+    background-color: @light-grey;
+    color: @grey;
 
-.button--grey:active {
-  background-color: @light-grey--down;
-  color: @grey--down;
+    &:hover,
+    &:focus {
+      background-color: @light-grey--down;
+    }
+
+    &:active {
+      background-color: @light-grey--down;
+      color: @grey--down;
+    }
+  }
 }

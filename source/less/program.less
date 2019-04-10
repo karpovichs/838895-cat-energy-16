@@ -2,16 +2,20 @@
   margin-bottom: 30px;
 }
 
+.program__list {
+  .no-list;
+}
+
 .program__item {
   margin-bottom: 20px;
   padding-top: 40px;
   padding-bottom: 20px;
 
   background-color: @light-grey;
-}
 
-.program__item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .program__name {
@@ -20,8 +24,11 @@
   padding: 0;
   padding-bottom: 11px;
 
-  .oswald-regular(24px; 37px; #000);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 24px;
+  line-height: (37 / 24) * 1em;
+  color: @black;
+  text-transform: uppercase;
 }
 
 .program__description {
@@ -34,15 +41,18 @@
 }
 
 .program__button {
-  .oswald-regular(16px;16px;@black);
-  .uppercase();
+  font-family: @font-oswald;
+  font-size: 16px;
+  line-height: 1em;
+  color: @black;
+  text-transform: uppercase;
   text-decoration: none;
+
+  &:active {
+    color: @black--down;
+  }
 }
 
 // .program__button:hover,
 // .program__button:focus {
 // }
-
-.program__button:active {
-  color: @black--down;
-}
