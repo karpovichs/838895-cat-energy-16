@@ -1,38 +1,125 @@
 .page-footer {
-  padding-bottom: 22px;
+  width: 320px;
+  margin: 0 auto;
 
   background-color: @light-grey;
 }
 
+.page-footer__contacts {
+  &--white {
+    background-color: @white;
+  }
+}
+
 .page-footer__map {
-  margin-bottom: 39px;
+  width: 100%;
+  height: 364px;
+
+  // Временно для сетки
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .page-footer__map-image {
   display: block;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.page-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 39px 20px 22px;
 }
 
 .page-footer__logo {
   display: block;
-  padding-bottom: 31px;
   margin-bottom: 22px;
+  padding-bottom: 31px;
+
+  text-align: center;
 
   border-bottom: 1px solid #d9d9d9;
 }
 
 .page-footer__social {
-  padding-bottom: 21px;
   margin-bottom: 22px;
+  padding-bottom: 21px;
+
+  text-align: center;
 
   border-bottom: 1px solid #d9d9d9;
 }
 
 .page-footer__copyright {
+  display: block;
+
   text-decoration: none;
   color: @grey;
+  text-align: center;
 
   &:active {
     color: @grey--down;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-footer__map {
+    height: 400px;
+  }
+
+  .page-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: @tablet-content-width;
+    margin: 0 auto;
+    padding: 58px 0;
+  }
+
+  .page-footer__logo,
+  .page-footer__social,
+  .page-footer__copyright {
+    padding: 0;
+
+    border: none;
+  }
+
+  .page-footer__logo {
+    margin-right: 155px;
+  }
+
+  .page-footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 162px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    position: relative;
+
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .page-footer__contacts {
+    position: absolute;
+    top: 96px;
+    left: 40px;
+  }
+
+  .page-footer__bottom {
+    width: @desktop-content-width;
+  }
+
+  .page-footer__logo {
+    margin-right: 423px;
   }
 }

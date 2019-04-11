@@ -1,4 +1,5 @@
 body {
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
@@ -37,4 +38,11 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

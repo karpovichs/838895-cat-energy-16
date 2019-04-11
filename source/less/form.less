@@ -15,7 +15,8 @@
 }
 
 .form__legend {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 28px;
 
   font-family: @font-oswald;
@@ -25,11 +26,15 @@
 }
 
 .form__input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 14px;
-}
 
-.form__wrapper:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__label {
@@ -43,6 +48,7 @@
 }
 
 .form__field {
+  flex-grow: 1;
   height: 52px;
   padding: 14px 16px 13px;
 
@@ -60,6 +66,7 @@
   &:focus {
     padding-left: 15px;
     padding-right: 15px;
+
     border: 2px solid @grey;
   }
 
@@ -81,13 +88,113 @@
 
 .form__button {
   width: 280px;
+  margin: 0 auto;
   margin-bottom: 21px;
 
   border: none;
 }
 
 .form__note {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
 
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset {
+    margin-bottom: 72px;
+
+    border: none;
+
+    &--goal {
+      border: 1px solid #ededed;
+    }
+
+    &--additional {
+      margin-bottom: 54px;
+    }
+  }
+
+  .form__legend {
+    width: auto;
+    margin: 0;
+    margin-bottom: 68px;
+
+    font-size: 36px;
+  }
+
+  .form__input-wrapper {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .form__label {
+    margin-right: 19px;
+
+    font-size: 20px;
+  }
+
+  .form__field {
+    font-size: 20px;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__button {
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .form__note {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset {
+    &--general,
+    &--goal {
+      width: 570px;
+    }
+
+    &--goal {
+      height: auto;
+      padding-top: 33px;
+      padding-bottom: 31px;
+    }
+
+    &--additional {
+      margin-bottom: 61px;
+    }
+  }
+
+  .form__input-wrapper {
+    &--contacts {
+      width: 570px;
+      margin: 0;
+    }
+  }
+
+  .form__check-wrapper {
+    width: 325px;
+
+    &:last-child {
+      width: 245px;
+    }
+  }
+
+  .form__button {
+    width: 570px;
+    margin-right: 80px;
+  }
 }

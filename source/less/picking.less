@@ -1,5 +1,6 @@
 .picking__title {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 37px;
 
   font-family: @font-oswald;
@@ -12,4 +13,30 @@
 .picking__form {
   margin: 0;
   margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .picking__form {
+    margin-bottom: 72px;
+  }
+
+  .picking__wrapper {
+    width: calc(@tablet-content-width - 41px - 37px);
+    margin: 0 auto;
+  }
+
+  .picking__title {
+    width: 325px;
+    margin: 0;
+    margin-bottom: 66px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .picking__wrapper {
+    width: @desktop-content-width;
+  }
 }

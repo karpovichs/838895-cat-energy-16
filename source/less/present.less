@@ -1,14 +1,38 @@
 .present {
   height: 289px;
 
+  background-color: @green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
 
 .present__text {
   width: 160px;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 185px;
 
   color: @white;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    height: 200px;
+  }
+
+  .present__text {
+    padding-top: 73px;
+    margin-left: 423px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    height: auto;
+    width: 245px;
+
+    background-color: @green;
+  }
 }

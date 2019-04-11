@@ -1,18 +1,22 @@
 .additional {
-  padding-top: 29px;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 35px;
+  padding-top: 29px;
 
   border-top: 1px solid #ededed;
 }
 
 .additional__title {
   margin: 0;
-  margin-bottom: 29px;
+  padding-bottom: 29px;
 
   font-family: @font-oswald;
   font-size: 24px;
   line-height: 1em;
   color: @black;
+
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .additional__list {
@@ -28,10 +32,6 @@
   border-bottom: 1px solid #cdcdcd;
 }
 
-.additional__item:first-child {
-  border-top: 1px solid #cdcdcd;
-}
-
 .additional__name {
   margin: 0;
   margin-bottom: 10px;
@@ -45,9 +45,110 @@
 
 .additional__description {
   display: flex;
-  margin-bottom: 12px;
+  justify-content: space-between;
 }
 
 .additional__text {
   margin: 0;
+}
+
+.additional__button {
+  width: 100%;
+  margin-top: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional {
+    width: @tablet-content-width;
+    margin-bottom: 78px;
+    padding-top: 0;
+
+    border: none;
+  }
+
+  .additional__products {
+    margin-bottom: 69px;
+  }
+
+  .additional__title {
+    margin-bottom: 71px;
+    padding-bottom: 0;
+
+    font-size: 36px;
+
+    border: none;
+  }
+
+  .additional__list {
+    margin-bottom: 0;
+  }
+
+  .additional__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -1px;
+    padding: 25px 36px 27px 38px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  .additional__name {
+    font-size: 20px;
+  }
+
+  .additional__text {
+    margin-left: 61px;
+  }
+
+  .additional__button {
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional {
+    width: @desktop-content-width;
+    margin-bottom: 86px;
+  }
+
+  .additional__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional__products {
+    width: 895px;
+    margin-bottom: 0;
+  }
+
+  .additional__item {
+    align-items: baseline;
+    padding: 15px 0 16px;
+
+    border-right: none;
+    border-left: none;
+    border-color: #cdcdcd;
+  }
+
+  .additional__name {
+    margin-right: auto;
+  }
+
+  .additional__description {
+    width: 285px;
+  }
+
+  .additional__text {
+    margin-left: 0;
+  }
+
+  .additional__button {
+    width: 245px;
+    margin-top: 0;
+    margin-left: 40px;
+  }
 }
