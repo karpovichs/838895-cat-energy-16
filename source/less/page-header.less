@@ -23,15 +23,32 @@
 }
 
 .page-header__logo {
+  position: relative;
+
   display: block;
   padding-top: 11px;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
 
-  border-bottom: 1px solid #e6e6e6;
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: -20px;
+    bottom: -1px;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
 
   @media @tablet-width {
     padding: 0;
 
     border: none;
+
+    &::after {
+      display: none;
+    }
   }
 }
