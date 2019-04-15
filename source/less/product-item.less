@@ -2,10 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media @tablet-width {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .product-item__content {
   width: 140px;
+
+  @media @tablet-width {
+    width: 250px;
+    margin-bottom: 33px;
+  }
+
+  @media @desktop-width {
+    width: 171px;
+  }
 }
 
 .product-item__name {
@@ -18,28 +32,52 @@
   line-height: (20 / 16) * 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    width: 130px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+
+    font-size: 20px;
+    line-height: 1em;
+    text-align: center;
+  }
 }
 
 .product-item__info {
   width: 140px;
+  border-collapse: collapse;
+
+  @media @tablet-width {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: -2px;
+  }
+
+  @media @desktop-width {
+    width: 171px;
+  }
 }
 
 .product-item__value {
   text-align: right;
 }
 
+.produnct-item__field,
+.product-item__value {
+  @media @tablet-width {
+    padding-top: 2px;
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
 .product-item__image__wrapper {
   width: 140px;
   height: 144px;
-}
 
-@media (min-width: @tablet-width) {
-  .product-item__wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .product-item__image-wrapper {
+  @media @tablet-width {
     width: 161px;
     height: 172px;
     margin: 0 auto;
@@ -52,51 +90,14 @@
       height: 208px;
     }
   }
+}
 
-  .product-item__content {
-    width: 250px;
-    margin-bottom: 33px;
-  }
-
-  .product-item__name {
-    width: 130px;
-    margin: 0 auto;
-    margin-bottom: 21px;
-
-    font-size: 20px;
-    line-height: 1em;
-    text-align: center;
-  }
-
-  .product-item__info {
-    width: 250px;
-    margin: 0 auto;
-    margin-top: -2px;
-  }
-
-  .product-item__field,
-  .product-item__value {
-    padding-top: 2px;
-    padding-bottom: 6px;
-
-    border-bottom: 1px solid #cdcdcd;
-  }
-
-  .product-item__button {
+.product-item__button {
+  @media @tablet-width {
     width: 100%;
     font-size: 16px;
     line-height: 20px;
     padding-top: 12px;
     padding-bottom: 9px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .product-item__content {
-    width: 171px;
-  }
-
-  .product-item__info {
-    width: 171px;
   }
 }

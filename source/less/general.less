@@ -8,6 +8,11 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: @grey;
+
+  @media @tablet-width {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -38,11 +43,4 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-@media (min-width: @tablet-width) {
-  body {
-    font-size: 16px;
-    line-height: 24px;
-  }
 }

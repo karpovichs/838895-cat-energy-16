@@ -6,34 +6,103 @@
   border: none;
 
   &--goal {
+    position: relative;
     padding-top: 27px;
     padding-bottom: 24px;
 
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: -20px;
+
+      width: 320px;
+      height: 1px;
+
+      background-color: #ededed;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  @media @tablet-width {
+    margin-bottom: 72px;
+
+    &--goal {
+      border: 1px solid #ededed;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &--additional {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media @desktop-width {
+    &--general,
+    &--goal {
+      width: 570px;
+    }
+
+    &--goal {
+      height: auto;
+      padding-top: 33px;
+      padding-bottom: 31px;
+    }
+
+    &--additional {
+      margin-bottom: 61px;
+    }
   }
 }
 
 .form__legend {
-  width: 280px;
-  margin: 0 auto;
   margin-bottom: 28px;
 
   font-family: @font-oswald;
   font-size: 24px;
   line-height: 1em;
   color: @black;
+
+  @media @tablet-width {
+    width: auto;
+    margin: 0;
+    margin-bottom: 68px;
+
+    font-size: 36px;
+  }
 }
 
 .form__input-wrapper {
   display: flex;
   align-items: center;
-  width: 280px;
-  margin: 0 auto;
   margin-bottom: 14px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media @tablet-width {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  @media @desktop-width {
+    &--contacts {
+      width: 570px;
+      margin: 0;
+    }
   }
 }
 
@@ -45,6 +114,12 @@
   line-height: (18 / 16) * 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    margin-right: 19px;
+
+    font-size: 20px;
+  }
 }
 
 .form__field {
@@ -74,6 +149,10 @@
     resize: none;
     min-height: 148px;
   }
+
+  @media @tablet-width {
+    font-size: 20px;
+  }
 }
 
 .form__radio-wrapper,
@@ -86,115 +165,53 @@
   }
 }
 
-.form__button {
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 21px;
-
-  border: none;
-}
-
-.form__note {
-  width: 280px;
-  margin: 0 auto;
-
-  line-height: 16px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset {
-    margin-bottom: 72px;
-
-    border: none;
-
-    &--goal {
-      border: 1px solid #ededed;
-    }
-
-    &--additional {
-      margin-bottom: 54px;
-    }
-  }
-
-  .form__legend {
-    width: auto;
-    margin: 0;
-    margin-bottom: 68px;
-
-    font-size: 36px;
-  }
-
-  .form__input-wrapper {
-    width: auto;
-    margin-bottom: 20px;
-  }
-
-  .form__label {
-    margin-right: 19px;
-
-    font-size: 20px;
-  }
-
-  .form__field {
-    font-size: 20px;
-  }
-
-  .form__button-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  .form__button {
-    margin: 0;
-    margin-right: 60px;
-  }
-
-  .form__note {
-    margin: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__column-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .form__fieldset {
-    &--general,
-    &--goal {
-      width: 570px;
-    }
-
-    &--goal {
-      height: auto;
-      padding-top: 33px;
-      padding-bottom: 31px;
-    }
-
-    &--additional {
-      margin-bottom: 61px;
-    }
-  }
-
-  .form__input-wrapper {
-    &--contacts {
-      width: 570px;
-      margin: 0;
-    }
-  }
-
-  .form__check-wrapper {
+.form__check-wrapper {
+  @media @desktop-width {
     width: 325px;
 
     &:last-child {
       width: 245px;
     }
   }
+}
 
-  .form__button {
+.form__button-wrapper {
+  @media @tablet-width {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 21px;
+
+  border: none;
+
+  @media @tablet-width {
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  @media @tablet-width {
     width: 570px;
     margin-right: 80px;
+  }
+}
+
+.form__note {
+  line-height: 16px;
+
+  @media @tablet-width {
+    margin: 0;
+  }
+}
+
+.form__column-wrapper {
+  @media @desktop-width {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

@@ -1,15 +1,22 @@
 .program {
-  margin: 0 auto;
   margin-bottom: 30px;
-}
 
-.program__wrapper {
-  width: 280px;
-  margin: 0 auto;
+  @media @tablet-width {
+    margin-bottom: 47px;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 75px;
+  }
 }
 
 .program__list {
   .no-list;
+
+  @media @desktop-width {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .program__item {
@@ -20,6 +27,17 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media @tablet-width {
+    margin-bottom: 30px;
+    padding: 50px 62px 58px 53px;
+  }
+
+  @media @desktop-width {
+    width: 570px;
+    margin-bottom: 0;
+    padding: 78px 52px 58px;
   }
 }
 
@@ -35,6 +53,18 @@
   line-height: (37 / 24) * 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 36px;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 70px;
+    padding-left: 163px;
+  }
 }
 
 .program__description {
@@ -44,6 +74,23 @@
   padding-bottom: 22px;
 
   border-bottom: 1px solid #d9d9d9;
+
+  @media @tablet-width {
+    width: 371px;
+    margin-bottom: 59px;
+    padding: 0;
+
+    border-bottom: none;
+
+    &--gaining {
+      width: 345px;
+    }
+  }
+
+  @media @desktop-width {
+    width: 465px;
+    margin-bottom: 35px;
+  }
 }
 
 .program__button {
@@ -56,74 +103,5 @@
 
   &:active {
     color: @black--down;
-  }
-}
-
-// .program__button:hover,
-// .program__button:focus {
-// }
-
-@media (min-width: @tablet-width) {
-  .program {
-    margin-bottom: 47px;
-  }
-
-  .program__wrapper {
-    width: @tablet-content-width;
-  }
-
-  .program__item {
-    margin-bottom: 30px;
-    padding: 50px 62px 58px 53px;
-  }
-
-  .program__name {
-    margin-bottom: 20px;
-    padding: 0;
-
-    font-size: 36px;
-  }
-
-  .program__description {
-    width: 371px;
-    margin-bottom: 59px;
-    padding: 0;
-
-    border-bottom: none;
-
-    &--gaining {
-      width: 345px;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .program {
-    margin-bottom: 75px;
-  }
-
-  .program__wrapper {
-    width: @desktop-content-width;
-  }
-
-  .program__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .program__item {
-    width: 570px;
-    margin-bottom: 0;
-    padding: 78px 52px 58px;
-  }
-
-  .program__name {
-    margin-bottom: 70px;
-    padding-left: 163px;
-  }
-
-  .program__description {
-    width: 465px;
-    margin-bottom: 35px;
   }
 }

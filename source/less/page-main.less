@@ -1,10 +1,4 @@
-.page-main {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .page-main__title {
-  width: 280px;
   margin: 0 auto;
   margin-bottom: 30px;
 
@@ -12,25 +6,11 @@
   font-size: 36px;
   line-height: (60 / 36) * 1em;
   color: @black;
-}
 
-@media (min-width: @tablet-width) {
-  .page-main {
-    width: @tablet-content-width;
-  }
-
-  .page-main__title {
-    width: @tablet-content-width;
+  @media @tablet-width {
     margin-bottom: 68px;
 
     font-size: 60px;
     line-height: 60px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-main,
-  .page-main__title {
-    width: @desktop-content-width;
   }
 }

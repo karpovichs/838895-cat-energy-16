@@ -1,16 +1,32 @@
 .promo {
-  width: 320px;
-  margin: 0 auto;
   margin-bottom: 22px;
   padding-top: 32px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media @tablet-width {
+    // Временно для сетки, вместо картинки
+    padding-bottom: 529px;
+
+    background: none;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 80px;
+    padding-bottom: 189px;
+  }
 }
 
 .promo__wrapper {
-  width: 280px;
-  margin: 0 auto;
+  @media @tablet-width {
+    padding-left: 90px;
+  }
+
+  @media @desktop-width {
+    padding-left: 81px;
+  }
 }
 
 .promo__header {
@@ -22,6 +38,18 @@
   line-height: 1em;
   text-align: center;
   color: @white;
+
+  @media @tablet-width {
+    margin-bottom: 26px;
+
+    font-size: 60px;
+    text-align: left;
+    color: @black;
+  }
+
+  @media @desktop-width {
+    width: 440px;
+  }
 }
 
 .promo__text {
@@ -34,30 +62,8 @@
   text-align: center;
   color: @white;
   text-transform: uppercase;
-}
 
-@media (min-width: @tablet-width) {
-  .promo {
-    width: @tablet-width;
-    padding-bottom: 529px;
-
-    background: none;
-  }
-
-  .promo__wrapper {
-    width: @tablet-content-width;
-    padding-left: 90px;
-  }
-
-  .promo__header {
-    margin-bottom: 26px;
-
-    font-size: 60px;
-    text-align: left;
-    color: @black;
-  }
-
-  .promo__text {
+  @media @tablet-width {
     margin-bottom: 44px;
 
     font-size: 20px;
@@ -65,29 +71,7 @@
     color: @black;
   }
 
-  .promo__image {
-    display: none;
-    // position: absolute; для дальнейшего позиционирования
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .promo {
-    width: @desktop-width;
-    margin-bottom: 80px;
-    padding-bottom: 189px;
-  }
-
-  .promo__wrapper {
-    width: @desktop-content-width;
-    padding-left: 81px;
-  }
-
-  .promo__header {
-    width: 440px;
-  }
-
-  .promo__text {
+  @media @desktop-width {
     margin-bottom: 49px;
   }
 }

@@ -4,6 +4,17 @@
   background-color: @green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media @tablet-width {
+    height: 200px;
+  }
+
+  @media @desktop-width {
+    height: auto;
+    width: 245px;
+
+    background-color: @green;
+  }
 }
 
 .present__text {
@@ -13,26 +24,18 @@
 
   color: @white;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  .present {
-    height: 200px;
-  }
-
-  .present__text {
-    padding-top: 73px;
+  @media @tablet-width {
     margin-left: 423px;
+    padding-top: 73px;
 
     text-align: left;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .present {
-    height: auto;
-    width: 245px;
+  @media @desktop-width {
+    margin: 0 auto;
+    padding-top: 187px;
 
-    background-color: @green;
+    text-align: center;
   }
 }
