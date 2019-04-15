@@ -1,6 +1,6 @@
 .button {
   display: block;
-  max-width: 280px;
+  width: 280px;
   padding-top: 14px;
   padding-bottom: 11px;
 
@@ -38,5 +38,11 @@
       background-color: @light-grey--down;
       color: @grey--down;
     }
+  }
+
+  @media @tablet-width {
+    width: 245px;
+
+    font-size: 20px;
   }
 }

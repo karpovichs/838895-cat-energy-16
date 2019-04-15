@@ -4,6 +4,29 @@
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media @tablet-width {
+    // Временно для сетки, вместо картинки
+    padding-bottom: 529px;
+
+    background: none;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 80px;
+    padding-bottom: 189px;
+  }
+}
+
+.promo__wrapper {
+  @media @tablet-width {
+    padding-left: 90px;
+  }
+
+  @media @desktop-width {
+    padding-left: 81px;
+  }
 }
 
 .promo__header {
@@ -13,15 +36,42 @@
   font-family: @font-oswald;
   font-size: 36px;
   line-height: 1em;
+  text-align: center;
   color: @white;
+
+  @media @tablet-width {
+    margin-bottom: 26px;
+
+    font-size: 60px;
+    text-align: left;
+    color: @black;
+  }
+
+  @media @desktop-width {
+    width: 440px;
+  }
 }
 
 .promo__text {
   margin: 0;
+  margin-bottom: 26px;
 
   font-family: @font-oswald;
   font-size: 14px;
   line-height: 1em;
+  text-align: center;
   color: @white;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    margin-bottom: 44px;
+
+    font-size: 20px;
+    text-align: left;
+    color: @black;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 49px;
+  }
 }

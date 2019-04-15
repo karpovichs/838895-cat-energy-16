@@ -1,24 +1,82 @@
 .additional {
-  padding-top: 29px;
+  position: relative;
   margin-bottom: 35px;
+  padding-top: 29px;
 
-  border-top: 1px solid #ededed;
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -20px;
+    top: 0;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #ededed;
+  }
+
+  @media @tablet-width {
+    margin-bottom: 78px;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media @desktop-width {
+    margin-bottom: 86px;
+  }
+}
+
+.additional__wrapper {
+  @media @desktop-width {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional__products {
+  @media @tablet-width {
+    margin-bottom: 69px;
+  }
+
+  @media @desktop-width {
+    width: 895px;
+    margin-bottom: 0;
+  }
 }
 
 .additional__title {
   margin: 0;
-  margin-bottom: 29px;
+  padding-bottom: 29px;
 
   font-family: @font-oswald;
   font-size: 24px;
   line-height: 1em;
   color: @black;
+
+  border-bottom: 1px solid #cdcdcd;
+
+  @media @tablet-width {
+    margin-bottom: 71px;
+    padding-bottom: 0;
+
+    font-size: 36px;
+
+    border: none;
+  }
 }
 
 .additional__list {
   .no-list;
 
   margin-bottom: 39px;
+
+  @media @tablet-width {
+    margin-bottom: 0;
+  }
 }
 
 .additional__item {
@@ -26,10 +84,25 @@
   padding-bottom: 17px;
 
   border-bottom: 1px solid #cdcdcd;
-}
 
-.additional__item:first-child {
-  border-top: 1px solid #cdcdcd;
+  @media @tablet-width {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -1px;
+    padding: 25px 36px 27px 38px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  @media @desktop-width {
+    align-items: baseline;
+    padding: 15px 0 16px;
+
+    border-right: none;
+    border-left: none;
+    border-color: #cdcdcd;
+  }
 }
 
 .additional__name {
@@ -41,13 +114,51 @@
   line-height: 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    font-size: 20px;
+  }
+
+  @media @desktop-width {
+    margin-right: auto;
+  }
 }
 
 .additional__description {
   display: flex;
-  margin-bottom: 12px;
+  justify-content: space-between;
+
+  @media @desktop-width {
+    width: 285px;
+  }
 }
 
 .additional__text {
   margin: 0;
+
+  @media @tablet-width {
+    margin-left: 61px;
+  }
+
+  @media @desktop-width {
+    margin-left: 0;
+  }
+}
+
+.additional__button {
+  width: 100%;
+  margin-top: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media @tablet-width {
+    margin-top: 22px;
+  }
+
+  @media @desktop-width {
+    width: 245px;
+    margin-top: 0;
+    margin-left: 40px;
+  }
 }

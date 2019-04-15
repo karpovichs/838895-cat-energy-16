@@ -1,20 +1,30 @@
 .nav-list {
   .no-list;
-}
 
-.nav-list__item {
-  padding-top: 22px;
-  padding-bottom: 23px;
+  @media @tablet-width {
+    display: flex;
+    justify-content: space-between;
+    width: 439px;
+  }
 
-  border-bottom: 1px solid #e6e6e6;
+  @media @desktop-width {
+    width: 479px;
+  }
 }
 
 .nav-list__link {
+  position: relative;
+
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
   font-family: @font-oswald;
   font-weight: 800;
   font-size: 20px;
   line-height: 1em;
   color: @black;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -25,5 +35,35 @@
 
   &:active {
     color: @black--down;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: -20px;
+    bottom: -1px;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+
+  @media @tablet-width {
+    padding-top: 0;
+    padding-bottom: 8px;
+
+    font-weight: 700;
+
+    border-bottom: none;
+
+    &--active {
+      border-bottom: 2px solid @green;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }

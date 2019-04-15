@@ -3,32 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип">
-        <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--active">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <header class="page-header container">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип">
+          <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item">
+                <a class="nav-list__link nav-list__link--active">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -36,16 +40,18 @@
       <h1 class="visually-hidden">Cat Energy - функцональное питание для котов</h1>
 
       <section class="promo">
-        <div class="promo__wrapper">
-          <h2 class="promo__header">Функциональное питание для котов</h2>
-          <p class="promo__text">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="http://placehold.it/280x270" width="280" height="270" alt="Кэт Энерджи Про с курицей">
-          <a class="promo__button button" href="form.html">Подобрать программу</a>
+        <div class="container">
+          <div class="promo__wrapper">
+            <h2 class="promo__header">Функциональное питание для котов</h2>
+            <p class="promo__text">Занялся собой? Займись котом!</p>
+            <img class="promo__image" src="http://placehold.it/280x270" width="280" height="270" alt="Кэт Энерджи Про с курицей">
+            <a class="promo__button button" href="form.html">Подобрать программу</a>
+          </div>
         </div>
       </section>
 
       <section class="program">
-        <div class="program__wrapper">
+        <div class="container">
           <h2 class="visually-hidden">Каталог программ</h2>
           <ul class="program__list">
             <li class="program__item">
@@ -55,7 +61,7 @@
             </li>
             <li class="program__item">
               <h3 class="program__name program__name--gaining">Набор массы</h3>
-              <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <p class="program__description program__description--gaining">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program__button" href="#">Каталог Pro</a>
             </li>
           </ul>
@@ -63,7 +69,7 @@
       </section>
 
       <section class="about">
-        <div class="about__wrapper">
+        <div class="container">
           <h2 class="about__title">Как это работает</h2>
           <ul class="about__list">
             <li class="about__item">
@@ -95,28 +101,38 @@
       </section>
 
       <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list">
-            <li class="example__item">
-              <b class="example__number">5 кг</b>
-              <p class="example__description">снижение веса</p>
-            </li>
-            <li class="example__item">
-              <b class="example__number">60 дней</b>
-              <p class="example__description">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="example__cost-wrapper">
-            <b class="example__cost example__cost--text">Затраты на питание:</b>
-            <b class="example__cost example__cost--number">15 000 руб.</b>
-          </div>
-          <img class="example__image" src="http://placehold.it/311x232" width="311" height="232" alt="Борис до и после">
-          <div class="example__toggle">
-            <span class="example__toggle-label example__toggle-label--before">Было</span>
-            <!-- toggle -->
-            <span class="example__toggle-label example__toggle-label--after">Стало</span>
+        <div class="container">
+          <div class="example__wrapper">
+            <div class="example__column">
+              <h2 class="example__title">Живой пример</h2>
+              <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              <div class="example__features">
+                <ul class="example__list">
+                  <li class="example__item">
+                    <b class="example__number">5 кг</b>
+                    <p class="example__description example__description--weight">снижение веса</p>
+                  </li>
+                  <li class="example__item">
+                    <b class="example__number">60 дней</b>
+                    <p class="example__description example__description--time">затрачено времени</p>
+                  </li>
+                </ul>
+                <div class="example__cost-wrapper">
+                  <b class="example__cost example__cost--text">Затраты на питание:</b>
+                  <b class="example__cost example__cost--number">15 000 руб.</b>
+                </div>
+              </div>
+            </div>
+            <div class="example__column">
+              <div class="example__image-wrapper">
+                <img class="example__image" src="http://placehold.it/311x232" width="311" height="232" alt="Борис до и после">
+              </div>
+              <div class="example__toggle">
+                <span class="example__toggle-label example__toggle-label--before">Было</span>
+                <!-- toggle -->
+                <span class="example__toggle-label example__toggle-label--after">Стало</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -124,36 +140,44 @@
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__contacts page-footer__contacts--white">
+        <div class="container">
+          <div class="contacts">
+            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__map">
+        <img class="page-footer__map-image" src="http://placehold.it/320x364" width="320" height="364" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </div>
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts contacts--white">
-          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="container">
+        <div class="page-footer__bottom">
+          <a class="page-footer__logo">
+            <img class="page-footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип Кэт Энерджи">
+          </a>
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vk" href="#">
+                  Кэт Энерджи в Вконтакте
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--inst" href="#">Кэт Энерджи в Инстаграме</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--fb" href="#">Кэт Энерджи в Фэйсбуке</a>
+              </li>
+            </ul>
+          </div>
+          <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+            <img class="page-footer__copyright-logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
         </div>
-        <div class="page-footer__map">
-          <img class="page-footer__map-image" src="http://placehold.it/320x364" width="320" height="364" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </div>
-        <a class="page-footer__logo">
-          <img class="page-footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип Кэт Энерджи">
-        </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="#">
-                Кэт Энерджи в Вконтакте
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--inst" href="#">Кэт Энерджи в Инстаграме</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--fb" href="#">Кэт Энерджи в Фэйсбуке</a>
-            </li>
-          </ul>
-        </div>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
-          <img class="page-footer__copyright-logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
+      </div>
       </div>
     </footer>
 

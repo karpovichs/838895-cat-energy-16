@@ -1,9 +1,19 @@
 .contacts {
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 24px;
+  justify-content: space-between;
+  padding: 30px 0 24px;
 
-  &--white {
+  @media @tablet-width {
+    padding: 68px 0 60px;
+  }
+
+  @media @desktop-width {
+    position: absolute;
+    top: 96px;
+    left: 40px;
+    width: 570px;
+    padding: 68px 90px 59px 76px;
+
     background-color: @white;
   }
 }
@@ -17,9 +27,25 @@
   line-height: (20 / 16) * 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    width: 153px;
+
+    font-size: 20px;
+  }
 }
 
 .contacts__address {
   width: 140px;
   margin: 0;
+
+  @media @tablet-width {
+    width: 164px;
+
+    text-align: right;
+  }
+
+  @media @desktop-width {
+    text-align: left;
+  }
 }

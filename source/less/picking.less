@@ -1,5 +1,4 @@
 .picking__title {
-  margin: 0;
   margin-bottom: 37px;
 
   font-family: @font-oswald;
@@ -7,9 +6,33 @@
   line-height: (18 / 14) * 1em;
   color: @black;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    width: 325px;
+    margin: 0;
+    margin-bottom: 66px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .picking__form {
   margin: 0;
   margin-bottom: 30px;
+
+  @media @tablet-width {
+    margin-bottom: 72px;
+  }
+}
+
+.picking__wrapper {
+  @media @tablet-width {
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-width {
+    width: auto;
+  }
 }
