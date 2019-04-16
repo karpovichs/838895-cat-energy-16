@@ -1,10 +1,23 @@
 .main-nav {
+  position: relative;
+
   @media @tablet-width {
     margin-top: 21px;
   }
 }
 
 .main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: -44px;
+  font-size: 0;
+  border: none;
+
+  width: 24px;
+  height: 18px;
+
+  background-color: @grey;
+
   @media @tablet-width {
     display: none;
   }
