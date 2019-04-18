@@ -16,8 +16,7 @@
 }
 
 .about__title {
-  margin: 0;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
 
   font-family: @font-oswald;
   font-size: 36px;
@@ -32,6 +31,8 @@
 .about__list {
   .no-list;
 
+  counter-reset: about__list;
+
   @media @tablet-width {
     display: flex;
     flex-wrap: wrap;
@@ -40,6 +41,8 @@
 }
 
 .about__item {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 28px;
@@ -53,6 +56,22 @@
     &:last-child,
     &:nth-last-child(2) {
       margin-bottom: 0;
+    }
+
+    &::before {
+      counter-increment: about__list;
+
+      content: counter(about__list);
+
+      position: absolute;
+      z-index: -1;
+      top: -27px;
+      left: 122px;
+
+      font-family: @font-oswald;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
     }
   }
 
@@ -82,7 +101,7 @@
 }
 
 .about__text {
-  width: 200px;
+  width: 71.43%;
   margin: 0;
 
   @media @tablet-width {

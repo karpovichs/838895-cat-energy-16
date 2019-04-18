@@ -7,8 +7,7 @@
   background-position: 50% 0;
 
   @media @tablet-width {
-    // Временно для сетки, вместо картинки
-    padding-bottom: 529px;
+    margin-bottom: 0;
 
     background: none;
   }
@@ -21,17 +20,18 @@
 
 .promo__wrapper {
   @media @tablet-width {
-    padding-left: 90px;
+    position: relative;
+    /* TODO: проверить в будущем */
+    padding: 0 0 529px 12.3%;
   }
 
   @media @desktop-width {
-    padding-left: 81px;
+    padding: 0 0 0 81px;
   }
 }
 
 .promo__header {
-  margin: 0;
-  margin-bottom: 22px;
+  margin: 0 0 22px;
 
   font-family: @font-oswald;
   font-size: 36px;
@@ -40,6 +40,7 @@
   color: @white;
 
   @media @tablet-width {
+    width: 430px;
     margin-bottom: 26px;
 
     font-size: 60px;
@@ -53,8 +54,7 @@
 }
 
 .promo__text {
-  margin: 0;
-  margin-bottom: 26px;
+  margin: 0 0 26px;
 
   font-family: @font-oswald;
   font-size: 14px;
@@ -73,5 +73,35 @@
 
   @media @desktop-width {
     margin-bottom: 49px;
+  }
+}
+
+.promo__image-wrapper {
+  width: 280px;
+  height: 270px;
+  margin: 0 auto;
+
+  @media @tablet-width {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 0;
+
+    width: 708px;
+    height: 609px;
+
+    transform: translateX(-50%);
+
+    background-color: @light-grey;
+  }
+
+  @media @desktop-width {
+    top: -83px;
+    left: 450px;
+
+    width: 552px;
+    height: 499px;
+
+    transform: translateX(0);
   }
 }
