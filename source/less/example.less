@@ -1,5 +1,5 @@
 .example {
-  padding-top: 30px 0 34px;
+  padding: 30px 0 34px;
 
   background-color: @light-grey;
 
@@ -150,16 +150,13 @@
 
 .example__image-wrapper {
   width: 280px;
-  height: 232px;
+  //Убрала временно пока не сделан слайдер height: 232px;
   margin: 0 auto 35px;
 
   @media @tablet-width {
-    // Временно для сетки
     width: 677px;
-    height: 517px;
+    // height: 517px;
     margin-bottom: 20px;
-
-    background-color: rgba(0, 0, 0, 0.1);
   }
 
   @media @desktop-width {

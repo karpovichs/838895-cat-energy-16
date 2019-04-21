@@ -61,4 +61,23 @@
       border-bottom: 2px solid @green;
     }
   }
+
+  @media @desktop-width {
+    &--white {
+      color: @white;
+
+      &:hover,
+      &:focus {
+        color: @white--hover;
+      }
+
+      &:active {
+        color: @white--down;
+      }
+
+      &--active {
+        border-color: @white;
+      }
+    }
+  }
 }
