@@ -78,11 +78,20 @@
   text-align: center;
 
   border-bottom: 1px solid #d9d9d9;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social {
   margin-bottom: 22px;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
 
   text-align: center;
 
@@ -90,22 +99,35 @@
 }
 
 .page-footer__copyright {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   text-decoration: none;
   color: @grey;
   text-align: center;
 
+  &:hover,
+  &:focus {
+    .page-footer__copyright-logo {
+      fill: @green;
+    }
+  }
+
   &:active {
-    color: @grey--down;
+    opacity: 0.3;
   }
 
   @media @tablet-width {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 162px;
   }
+}
+
+.page-footer__copyright-logo {
+  margin-right: -6px;
+
+  fill: #666666;
 }
 
 .page-footer__logo,

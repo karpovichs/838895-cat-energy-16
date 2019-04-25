@@ -10,15 +10,29 @@
   position: absolute;
   right: 0;
   top: -44px;
-  font-size: 0;
-  border: none;
 
+  padding: 0;
   width: 24px;
   height: 18px;
 
-  background-color: @grey;
+  font-size: 0;
+
+  border: none;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 
   @media @tablet-width {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url("../img/icon-close.svg");
+}
+
+.main-nav--closed .main-nav__wrapper {
+  @media @mobile-max-width {
     display: none;
   }
 }

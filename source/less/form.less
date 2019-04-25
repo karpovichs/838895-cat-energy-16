@@ -89,6 +89,8 @@
 }
 
 .form__input-wrapper {
+  position: relative;
+
   display: flex;
   align-items: center;
   margin-bottom: 14px;
@@ -247,6 +249,34 @@
   @media @tablet-width {
     font-size: 20px;
   }
+}
+
+.form__icon {
+  position: absolute;
+
+  &--mail {
+    right: 16px;
+    top: 16px;
+
+    @media @tablet-width {
+      right: 20px;
+      top: 20px;
+    }
+  }
+
+  &--phone {
+    right: 13px;
+    top: 13px;
+
+    @media @tablet-width {
+      right: 21px;
+      top: 17px;
+    }
+  }
+}
+
+.form__field:focus ~ .form__icon {
+  fill: @green;
 }
 
 .form__radio-wrapper,
