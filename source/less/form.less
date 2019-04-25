@@ -64,6 +64,46 @@
       margin-bottom: 61px;
     }
   }
+
+  &--contacts,
+  &--comment,
+  &--additional {
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -10;
+      left: 0;
+      right: -20px;
+      top: 14px;
+
+      width: auto;
+      height: 3px;
+
+      background-color: @green;
+
+      @media @tablet-width {
+        top: 18px;
+        left: -70px;
+        right: -65px;
+        background: none;
+        background-image: linear-gradient(to right, @green 40px, @white 40px, @white 90px, @green 90px);
+      }
+
+      @media @desktop-width {
+        left: 0;
+        right: -20px;
+      }
+
+      @media (min-width: 1440px) {
+        left: -110px;
+        right: -110px;
+
+        background: none;
+        background-image: linear-gradient(to right, @green 70px, @white 70px, @white 150px, @green 150px);
+      }
+    }
+  }
 }
 
 .form__legend {
@@ -79,6 +119,8 @@
   font-size: 24px;
   line-height: 1em;
   color: @black;
+
+  background-color: @white;
 
   @media @tablet-width {
     max-width: 540px;
