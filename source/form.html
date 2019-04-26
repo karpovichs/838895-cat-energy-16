@@ -467,55 +467,61 @@
                 </div>
               </fieldset>
             </div>
-            <fieldset class="form__fieldset form__fieldset--contacts">
-              <legend class="form__legend">Контактные данные (владельца кота)</legend>
-              <div class="form__column-wrapper">
-                <div class="form__input-wrapper form__input-wrapper--contacts">
-                  <label class="form__label" for="mail">E-mail:*</label>
-                  <input class="form__field form__field--mail" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
-                  <svg class="form__icon form__icon--mail" width="17" height="13">
-                    <title>Иконка почты</title>
-                    <use xlink:href="#icon-mail"></use>
-                  </svg>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset form__fieldset--contacts">
+                <legend class="form__legend">Контактные данные (владельца кота)</legend>
+                <div class="form__column-wrapper">
+                  <div class="form__input-wrapper form__input-wrapper--contacts">
+                    <label class="form__label" for="mail">E-mail:*</label>
+                    <input class="form__field form__field--mail" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
+                    <svg class="form__icon form__icon--mail" width="17" height="13">
+                      <title>Иконка почты</title>
+                      <use xlink:href="#icon-mail"></use>
+                    </svg>
+                  </div>
+                  <div class="form__input-wrapper form__input-wrapper--contacts">
+                    <label class="form__label" for="phone">Телефон:*</label>
+                    <input class="form__field form__field--phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                    <svg class="form__icon form__icon--phone" width="20" height="20">
+                      <title>Иконка телефона</title>
+                      <use xlink:href="#icon-phone"></use>
+                    </svg>
+                  </div>
                 </div>
-                <div class="form__input-wrapper form__input-wrapper--contacts">
-                  <label class="form__label" for="phone">Телефон:*</label>
-                  <input class="form__field form__field--phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-                  <svg class="form__icon form__icon--phone" width="20" height="20">
-                    <title>Иконка телефона</title>
-                    <use xlink:href="#icon-phone"></use>
-                  </svg>
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset form__fieldset--comment">
+                <legend class="form__legend">Комментарий</legend>
+                <div class="form__input-wrapper">
+                  <label class="visually-hidden" for="about-cat">О коте</label>
+                  <textarea class="form__field form__field--textarea" id="about-cat" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </div>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--comment">
-              <legend class="form__legend">Комментарий</legend>
-              <div class="form__input-wrapper">
-                <label class="visually-hidden" for="about-cat">О коте</label>
-                <textarea class="form__field form__field--textarea" id="about-cat" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--additional">
-              <legend class="form__legend">Дополнительно</legend>
-              <div class="form__column-wrapper">
-                <div class="form__check-wrapper">
-                  <input class="visually-hidden form__input--checkbox" id="sweetener" type="checkbox" name="sweetener" checked>
-                  <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset form__fieldset--additional">
+                <legend class="form__legend">Дополнительно</legend>
+                <div class="form__column-wrapper">
+                  <div class="form__check-wrapper">
+                    <input class="visually-hidden form__input--checkbox" id="sweetener" type="checkbox" name="sweetener" checked>
+                    <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
+                  </div>
+                  <div class="form__check-wrapper">
+                    <input class="visually-hidden form__input--checkbox" id="water" type="checkbox" name="water">
+                    <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
+                  </div>
+                  <div class="form__check-wrapper">
+                    <input class="visually-hidden form__input--checkbox" id="milk" type="checkbox" name="milk">
+                    <label class="form__label form__label--checkbox" for="milk">Молоко</label>
+                  </div>
+                  <div class="form__check-wrapper">
+                    <input class="visually-hidden form__input--checkbox" id="vitamins" type="checkbox" name="vitamins">
+                    <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
+                  </div>
                 </div>
-                <div class="form__check-wrapper">
-                  <input class="visually-hidden form__input--checkbox" id="water" type="checkbox" name="water">
-                  <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
-                </div>
-                <div class="form__check-wrapper">
-                  <input class="visually-hidden form__input--checkbox" id="milk" type="checkbox" name="milk">
-                  <label class="form__label form__label--checkbox" for="milk">Молоко</label>
-                </div>
-                <div class="form__check-wrapper">
-                  <input class="visually-hidden form__input--checkbox" id="vitamins" type="checkbox" name="vitamins">
-                  <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
             <div class="form__button-wrapper">
               <button class="form__button button" type="submit">Отправить заявку</button>
               <p class="form__note">* — Обязательные поля</p>
@@ -601,7 +607,6 @@
                 <title>Логотип HTML Academy</title>
                 <use xlink:href="#htmlacademy"></use>
               </svg>
-              <!-- Иконка должна быть размером 27*34, но при ужимании под этот размер добавляются непонятные отступы -->
             </a>
           </div>
         </div>
