@@ -3,18 +3,35 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 125px;
   margin: 0 auto;
 }
 
-.social__item {
-  // Временно для сетки вместо иконок соцсетей
-  width: 22px;
-  height: 19px;
+.social__icon {
+  fill: #666666;
 
-  background-color: @grey;
-}
+  &:hover,
+  &focus {
+    fill: @green;
+  }
 
-.social__link {
-  font-size: 0;
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  &--mobile {
+    @media @tablet-width {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @tablet-width {
+      display: block;
+    }
+  }
 }

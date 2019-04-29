@@ -1,4 +1,7 @@
 .present {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 289px;
 
   background-color: @green;
@@ -11,7 +14,12 @@
     background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
 
+  @media @tablet-width and @tablet-max-width {
+    flex-direction: row;
+  }
+
   @media @tablet-width {
+
     height: 200px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -36,23 +44,24 @@
 
 .present__text {
   width: 160px;
-  margin: 0 auto;
-  padding-top: 185px;
 
   color: @white;
   text-align: center;
 
-  @media @tablet-width {
-    margin-left: 423px;
-    padding-top: 73px;
-
+  @media @tablet-width and @tablet-max-width {
     text-align: left;
   }
+}
 
-  @media @desktop-width {
-    margin: 0 auto;
-    padding-top: 187px;
+.present__icon {
+  margin-top: 65px;
+  margin-bottom: 55px;
 
-    text-align: center;
+  fill: @white;
+
+  @media @tablet-width and @tablet-max-width {
+    margin: 0;
+    margin-left: 91px;
+    margin-right: 277px;
   }
 }
