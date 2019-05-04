@@ -5,7 +5,7 @@
   padding-top: 27px;
 
   @media @tablet-width {
-    min-height: 435px;
+    min-height: 431px;
     padding: 0 37px 40px;
 
     border: 1px solid #e6e6e6;
@@ -14,9 +14,10 @@
 
 .product-more__title {
   position: relative;
+
   display: block;
   margin-bottom: 5px;
-  padding-top: 58px;
+  padding-top: 55px;
 
   font-family: @font-oswald;
   font-size: 16px;
@@ -25,6 +26,15 @@
   text-transform: uppercase;
   text-align: center;
 
+  @media @tablet-width {
+    width: 160px;
+    margin: 0 auto 23px;
+    padding-top: 164px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &::before {
     content: "";
 
@@ -32,6 +42,7 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+
     width: 30px;
     height: 30px;
 
@@ -40,36 +51,46 @@
     background-position: 50% 50%;
 
     @media @tablet-width {
+      top: 54px;
+
       width: 60px;
       height: 60px;
-      top: 54px;
 
       background-image: url("../img/icon-plus.svg");
     }
   }
-
-  @media @tablet-width {
-    margin-bottom: 21px;
-    padding-top: 164px;
-  }
 }
 
 .product-more__text {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 21px;
 
   text-align: center;
+  font-size: 12px;
+  line-height: (16 / 12) * 1em;
 
   @media @tablet-width {
-    margin-bottom: auto;
+    width: 180px;
+    margin: 0 auto auto;
+
+    font-size: 16px;
+  }
+
+  @media @desktop-width {
+    width: 170px;
+
+    line-height: 20px;
   }
 }
 
 .product-more__button {
+  padding: 10px 0 10px;
+
+  font-size: 16px;
+  line-height: (20 / 16) * 1em;
+
   @media @tablet-width {
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 9px;
+    padding: 12px 0 9px;
 
     font-size: 16px;
     line-height: 20px;

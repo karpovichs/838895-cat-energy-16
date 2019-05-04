@@ -1,5 +1,6 @@
 .picking__title {
-  margin-bottom: 37px;
+  width: 230px;
+  margin: -3px 0 39px;
 
   font-family: @font-oswald;
   font-size: 14px;
@@ -9,17 +10,25 @@
 
   @media @tablet-width {
     width: 325px;
-    margin: 0 0 66px;
+    margin: 0 0 66px 40px;
 
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media @desktop-width {
+    margin: 0 0 65px;
+  }
 }
 
 .picking__form {
-  margin: 0 0 30px;
+  margin: 0 0 32px;
 
   @media @tablet-width {
     margin-bottom: 72px;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 83px;
   }
 }

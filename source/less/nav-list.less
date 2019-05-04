@@ -4,6 +4,7 @@
   @media @tablet-width {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 439px;
   }
 
@@ -16,7 +17,7 @@
   position: relative;
 
   display: block;
-  padding: 22px 0 24px;
+  padding: 22px 0 25px;
 
   font-family: @font-oswald;
   font-weight: 800;
@@ -53,9 +54,11 @@
   }
 
   @media @tablet-width {
-    padding: 0 0 8px;
+    padding: 0 0 5px;
 
     font-weight: 700;
+    font-size: 18px;
+    line-height: 24.86px;
 
     &--active {
       border-bottom: 2px solid @green;
@@ -63,6 +66,9 @@
   }
 
   @media @desktop-width {
+    padding-bottom: 7px;
+    font-size: 20px;
+
     &--white {
       color: @white;
 

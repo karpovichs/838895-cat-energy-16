@@ -1,5 +1,5 @@
 .page-main__title {
-  margin: 0 auto 30px;
+  margin: 16px auto 27px;
 
   font-family: @font-oswald;
   font-size: 36px;
@@ -7,9 +7,21 @@
   color: @black;
 
   @media @tablet-width {
-    margin-bottom: 68px;
+    margin-bottom: 79px;
 
     font-size: 60px;
     line-height: 60px;
+
+    &--picking {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media @desktop-width {
+    margin-bottom: 80px;
+
+    &--picking {
+      margin-bottom: 53px;
+    }
   }
 }

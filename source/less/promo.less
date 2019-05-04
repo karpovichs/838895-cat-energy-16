@@ -1,7 +1,6 @@
 .promo {
-  position: relative;
   margin-bottom: 22px;
-  padding-top: 32px;
+  padding-top: 29px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -18,33 +17,14 @@
 
   @media @tablet-width {
     margin-bottom: 0;
+    padding: 0;
 
     background: none;
   }
 
   @media @desktop-width {
-    margin-bottom: 80px;
+    margin-bottom: 79px;
     padding-bottom: 189px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: -222px;
-      z-index: -100;
-
-      width: 50%;
-      height: 696px;
-
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-
-      @media @retina-dpi, @retina-dppx {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
-    }
   }
 }
 
@@ -52,7 +32,7 @@
   @media @tablet-width {
     position: relative;
     /* TODO: проверить в будущем */
-    padding: 0 0 529px 12.3%;
+    padding: 0 0 536px 12.3%;
   }
 
   @media @desktop-width {
@@ -61,7 +41,7 @@
 }
 
 .promo__header {
-  margin: 0 0 22px;
+  margin: 0 0 25px;
 
   font-family: @font-oswald;
   font-size: 36px;
@@ -71,7 +51,7 @@
 
   @media @tablet-width {
     width: 430px;
-    margin-bottom: 26px;
+    margin-bottom: 38px;
 
     font-size: 60px;
     text-align: left;
@@ -84,7 +64,7 @@
 }
 
 .promo__text {
-  margin: 0 0 26px;
+  margin: 0 0 29px;
 
   font-family: @font-oswald;
   font-size: 14px;
@@ -94,7 +74,7 @@
   text-transform: uppercase;
 
   @media @tablet-width {
-    margin-bottom: 44px;
+    margin-bottom: 47px;
 
     font-size: 20px;
     text-align: left;
@@ -102,14 +82,14 @@
   }
 
   @media @desktop-width {
-    margin-bottom: 49px;
+    margin-bottom: 54px;
   }
 }
 
 .promo__image-wrapper {
   width: 280px;
-  height: 270px;
-  margin: 0 auto;
+  height: 271px;
+  margin: 0 auto 5px;
 
   @media @tablet-width {
     position: absolute;
@@ -131,5 +111,19 @@
     height: 499px;
 
     transform: translateX(0);
+  }
+}
+
+.promo__button {
+  @media @mobile-max-width {
+    padding-bottom: 11px;
+
+    font-size: 14px;
+    line-height: (18 / 14) * 1em;
+  }
+
+  @media @desktop-width {
+    padding-left: 25px;
+    padding-right: 28px;
   }
 }

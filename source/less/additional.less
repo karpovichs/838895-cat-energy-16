@@ -1,7 +1,8 @@
 .additional {
   position: relative;
+
   margin-bottom: 35px;
-  padding-top: 29px;
+  padding-top: 30px;
 
   @media @mobile-max-width {
     &::before {
@@ -16,6 +17,15 @@
 
       background-color: #e6e6e6;
     }
+  }
+
+  @media @tablet-width {
+    margin-bottom: 78px;
+    padding-top: 0;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 86px;
   }
 
   &::after {
@@ -33,7 +43,7 @@
     background-color: @green;
 
     @media @tablet-width {
-      top: 18px;
+      top: 21px;
       left: -30px;
       right: -30px;
     }
@@ -50,15 +60,6 @@
       background: none;
       background-image: linear-gradient(to right, @green 70px, @white 70px, @white 150px, @green 150px);
     }
-  }
-
-  @media @tablet-width {
-    margin-bottom: 78px;
-    padding-top: 0;
-  }
-
-  @media @desktop-width {
-    margin-bottom: 86px;
   }
 }
 
@@ -82,9 +83,10 @@
 
 .additional__title {
   position: relative;
+
   display: inline-block;
 
-  margin: 0 0 28px;
+  margin: 0 0 32px;
   padding: 0 24px 0 0;
 
   vertical-align: middle;
@@ -92,11 +94,13 @@
   font-size: 24px;
   line-height: 1em;
   color: @black;
+
   background-color: @white;
 
   @media @tablet-width {
     position: relative;
-    margin-bottom: 71px;
+
+    margin-bottom: 80px;
     padding: 0 39px 0 37px;
 
     font-size: 36px;
@@ -121,7 +125,7 @@
 }
 
 .additional__item {
-  padding: 14px 0 17px;
+  padding: 14px 0 16px;
 
   border-bottom: 1px solid #cdcdcd;
 
@@ -132,6 +136,7 @@
   @media @tablet-width {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: -1px;
     padding: 25px 36px 27px 38px;
@@ -174,33 +179,55 @@
   @media @desktop-width {
     width: 285px;
   }
+
+  @media @desktop-width {
+    width: 287px;
+  }
 }
 
 .additional__text {
   margin: 0;
+  width: 140px;
+
+  &--price {
+    text-align: right;
+  }
 
   @media @tablet-width {
-    margin-left: 61px;
+    font-size: 16px;
+    line-height: (20 / 16) * 1em;
+    text-align: right;
+
+    &--price {
+      width: 95px;
+    }
   }
 
   @media @desktop-width {
-    margin-left: 0;
+    width: 240px;
+    text-align: left;
+
+    &--price {
+      width: 47px;
+    }
   }
 }
 
 .additional__button {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 14px;
+  padding-bottom: 9px;
 
   font-size: 16px;
-  line-height: 20px;
+  line-height: (20 / 16) * 1em;
 
   @media @tablet-width {
-    margin-top: 22px;
+    margin-top: 16px;
+    padding-bottom: 8px;
   }
 
   @media @desktop-width {
     width: 245px;
-    margin: 0 0 0 40px;
+    margin: 0 0 0 37px;
   }
 }

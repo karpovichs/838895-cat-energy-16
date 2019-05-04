@@ -9,7 +9,6 @@
   </head>
 
   <body>
-
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
@@ -28,8 +27,7 @@
             <title>Логотип Cat Energy</title>
             <use xlink:href="#icon-logo-desktop"></use></svg>
         </a>
-        <nav class="main-nav main-nav--opened">
-          <!-- модификатор closed для закрытия меню пока без js -->
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
@@ -202,7 +200,7 @@
                     </picture>
                   </div>
                   <div class="product-item__content">
-                    <h3 class="product-item__name">Cat Energy Pro 500 г</h3>
+                    <h3 class="product-item__name">Cat Energy Slim 500 г</h3>
                     <table class="product-item__info">
                       <tr>
                         <td class="product-item__field">Объем</td>
@@ -235,7 +233,7 @@
                     </picture>
                   </div>
                   <div class="product-item__content">
-                    <h3 class="product-item__name">Cat Energy Pro 1000 г</h3>
+                    <h3 class="product-item__name">Cat Energy Slim 1000 г</h3>
                     <table class="product-item__info">
                       <tr>
                         <td class="product-item__field">Объем</td>
@@ -268,7 +266,7 @@
                     </picture>
                   </div>
                   <div class="product-item__content">
-                    <h3 class="product-item__name">Cat Energy Pro 500 г</h3>
+                    <h3 class="product-item__name">Cat Energy Slim 500 г</h3>
                     <table class="product-item__info">
                       <tr>
                         <td class="product-item__field">Объем</td>
@@ -305,7 +303,7 @@
                   <h3 class="additional__name">Сахарозаменитель</h3>
                   <div class="additional__description">
                     <p class="additional__text">1 упаковка (100 г)</p>
-                    <p class="additional__text">200 Р.</p>
+                    <p class="additional__text additional__text--price">200 Р.</p>
                   </div>
                   <a class="additional__button button" href="#">Заказать</a>
                 </li>
@@ -313,7 +311,7 @@
                   <h3 class="additional__name">Питьевая вода</h3>
                   <div class="additional__description">
                     <p class="additional__text">5 литров</p>
-                    <p class="additional__text">50 Р.</p>
+                    <p class="additional__text additional__text--price">50 Р.</p>
                   </div>
                   <a class="additional__button button" href="#">Заказать</a>
                 </li>
@@ -321,7 +319,7 @@
                   <h3 class="additional__name">Молоко</h3>
                   <div class="additional__description">
                     <p class="additional__text">1 литр</p>
-                    <p class="additional__text">100 Р.</p>
+                    <p class="additional__text additional__text--price">100 Р.</p>
                   </div>
                   <a class="additional__button button" href="#">Заказать</a>
                 </li>
@@ -329,7 +327,7 @@
                   <h3 class="additional__name">Витамины</h3>
                   <div class="additional__description">
                     <p class="additional__text">1 упаковка (30 г)</p>
-                    <p class="additional__text">300 Р.</p>
+                    <p class="additional__text additional__text--price">300 Р.</p>
                   </div>
                   <a class="additional__button button" href="#">Заказать</a>
                 </li>
@@ -341,7 +339,7 @@
                 <title>Иконка с подарком</title>
                 <use xlink:href="#icon-gift"></use>
               </svg>
-              <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+              <p class="present__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
             </div>
           </div>
         </section>
@@ -352,13 +350,16 @@
       <div class="page-footer__contacts">
         <div class="container">
           <div class="contacts">
-            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <div class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="page-footer__map">
-        <picture class="page-footer__map-image">
+      <div class="page-footer__map" id="map">
+        <picture class="page-footer__map-image page-footer__map-image--nojs">
           <source type="image/webp" media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
@@ -428,6 +429,12 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/picturefill.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=607372f8-5f3a-481d-a2d0-25e3ced98424"></script>
+    <script src="js/map.js"></script>
+    <script src="js/cat-example.js"></script>
 
   </body>
 

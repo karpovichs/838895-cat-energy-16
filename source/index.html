@@ -13,7 +13,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header container">
+    <header class="page-header page-header--index container">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
           <svg class="page-header__logo-image--mobile" width="191px" height="38px">
@@ -27,8 +27,7 @@
             <title>Логотип Cat Energy</title>
             <use xlink:href="#icon-logo-desktop"></use></svg>
         </a>
-        <nav class="main-nav main-nav--opened">
-          <!-- модификатор closed для закрытия меню пока без js -->
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
@@ -120,7 +119,7 @@
                 <source type="image/webp" srcset="img/advantage-clock@1x.webp 1x, img/advantage-clock@2x.webp 2x">
                 <img class="about__icon-image about__icon-image--clock" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Иконка с часами">
               </picture>
-              <p class="about__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="about__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
             </li>
           </ul>
         </div>
@@ -151,16 +150,16 @@
             </div>
             <div class="example__column">
               <div class="example__image-wrapper">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1260px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="mg/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                  <picture class="example__image example__image--before">
+                    <source type="image/webp" media="(min-width: 1260px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="mg/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1260px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
-                </picture>
-                <picture>
+                    <source media="(min-width: 1260px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                    <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
+                  </picture>
+                <picture class="example__image example__image--after example__image--hidden">
                   <source type="image/webp" media="(min-width: 1260px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
@@ -171,9 +170,14 @@
                 </picture>
               </div>
               <div class="example__toggle">
-                <span class="example__toggle-label example__toggle-label--before">Было</span>
+                <button class="example__toggle-label example__toggle-label--before">Было</button>
                 <!-- toggle -->
-                <span class="example__toggle-label example__toggle-label--after">Стало</span>
+                <div class="example__scale">
+                  <div class="example__bar"></div>
+                  <div class="example__control"></div>
+                </div>
+
+                <button class="example__toggle-label example__toggle-label--after">Стало</button>
               </div>
             </div>
           </div>
@@ -186,13 +190,16 @@
       <div class="page-footer__contacts page-footer__contacts--white">
         <div class="container">
           <div class="contacts">
-            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <div class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="page-footer__map">
-        <picture class="page-footer__map-image">
+      <div class="page-footer__map" id="map">
+        <picture class="page-footer__map-image page-footer__map-image--nojs">
           <source type="image/webp" media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
@@ -204,9 +211,9 @@
       </div>
       <div class="page-footer__wrapper">
         <div class="container">
-          <div class="page-footer__bottom">
+          <div class="page-footer__bottom page-footer__bottom--index">
             <a class="page-footer__logo" href="index.html">
-              <svg width="128px" height="24px">
+              <svg width="130px" height="25px">
                 <title>Логотип Кэт Энерджи</title>
                 <use xlink:href="#icon-logo-footer"></use>
               </svg>
@@ -262,6 +269,13 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/picturefill.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=607372f8-5f3a-481d-a2d0-25e3ced98424"></script>
+    <script src="js/map.js"></script>
+    <script src="js/cat-example.js"></script>
+
   </body>
 
 </html>

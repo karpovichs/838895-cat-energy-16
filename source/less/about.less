@@ -2,21 +2,21 @@
   margin-bottom: 42px;
 
   @media @tablet-width {
-    margin-bottom: 47px;
-    padding-bottom: 54px;
+    margin-bottom: 7px;
+    padding-bottom: 5px;
 
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media @desktop-width {
-    margin-bottom: 27px;
+    margin-bottom: 12px;
 
     border: none;
   }
 }
 
 .about__title {
-  margin: 0 0 36px;
+  margin: 0 0 28px;
 
   font-family: @font-oswald;
   font-size: 36px;
@@ -24,6 +24,7 @@
   color: @black;
 
   @media @tablet-width {
+    margin: 0 0 13px;
     font-size: 60px;
   }
 }
@@ -38,6 +39,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media @desktop-width {
+    justify-content: flex-start;
+  }
 }
 
 .about__item {
@@ -45,18 +50,15 @@
 
   display: flex;
   justify-content: space-between;
-  margin-bottom: 28px;
+  margin-bottom: 21px;
 
   @media @tablet-width {
     flex-direction: column;
+    justify-content: flex-start;
     width: 324px;
-    margin-bottom: 90px;
+    margin: 36px 0 51px;
     padding-bottom: 46px;
 
-    &:last-child,
-    &:nth-last-child(2) {
-      margin-bottom: 0;
-    }
 
     &::before {
       counter-increment: about__list;
@@ -65,8 +67,8 @@
 
       position: absolute;
       z-index: -1;
-      top: -27px;
-      left: 122px;
+      top: -29px;
+      left: 104px;
 
       font-family: @font-oswald;
       font-size: 280px;
@@ -75,10 +77,28 @@
     }
   }
 
+  &:nth-child(2) {
+    &::before {
+      left: 110px;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    &::before {
+      left: 113px;
+    }
+  }
+
   @media @desktop-width {
     width: 245px;
-    margin-bottom: 0;
+    margin-right: 80px;
+    margin-bottom: 27px;
     padding-bottom: 46px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -92,7 +112,7 @@
   @media @tablet-width {
     width: 80px;
     height: 80px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 }
 
@@ -101,7 +121,7 @@
 }
 
 .about__text {
-  width: 71.43%;
+  width: 71%;
   margin: 0;
 
   @media @tablet-width {

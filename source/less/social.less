@@ -3,9 +3,19 @@
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  width: 125px;
-  margin: 0 auto;
+  width: 127px;
+  margin: 0 auto 0 72px;
+
+  @media (min-width: 321px) {
+    margin: 0 auto;
+  }
+
+  @media @tablet-width {
+    width: 124px;
+    margin: 0 auto 0 15px;
+  }
 }
 
 .social__icon {

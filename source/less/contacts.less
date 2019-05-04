@@ -1,18 +1,19 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding: 30px 0 24px;
+  padding: 29px 0 26px;
 
   @media @tablet-width {
-    padding: 68px 0 60px;
+    padding: 65px 42px 58px;
   }
 
   @media @desktop-width {
     position: absolute;
+    z-index: 10;
     top: 96px;
     left: 20px;
     width: 570px;
-    padding: 68px 90px 59px 76px;
+    padding: 64px 90px 57px 76px;
 
     background-color: @white;
   }
@@ -38,6 +39,7 @@
 .contacts__address {
   width: 140px;
   margin: 0;
+  line-height: 20px;
 
   @media @tablet-width {
     width: 164px;
@@ -46,6 +48,20 @@
   }
 
   @media @desktop-width {
+    width: 155px;
     text-align: left;
+  }
+}
+
+.contacts__address p {
+  padding: 0;
+  margin: 0;
+
+  @media @tablet-width {
+    margin-bottom: 19px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
