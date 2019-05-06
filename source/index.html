@@ -5,6 +5,8 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswaldregular2.woff" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -13,36 +15,40 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header page-header--index container">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <svg class="page-header__logo-image--mobile" width="191px" height="38px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-mobile"></use>
-          </svg>
-          <svg class="page-header__logo-image--tablet" width="173px" height="58px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-tablet"></use></svg>
-          <svg class="page-header__logo-image--desktop" width="202px" height="59px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-desktop"></use></svg>
-        </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list nav-list">
-              <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--white nav-list__link--active nav-list__link--active-white">Главная</a>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--white" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--white" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <header class="page-header page-header--index">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo">
+            <svg class="page-header__logo-image--mobile" width="191px" height="38px">
+              <title>Логотип Cat Energy</title>
+              <use xlink:href="#icon-logo-mobile"></use>
+            </svg>
+            <svg class="page-header__logo-image--tablet" width="173px" height="58px">
+              <title>Логотип Cat Energy</title>
+              <use xlink:href="#icon-logo-tablet"></use>
+            </svg>
+            <svg class="page-header__logo-image--desktop" width="202px" height="59px">
+              <title>Логотип Cat Energy</title>
+              <use xlink:href="#icon-logo-desktop"></use>
+            </svg>
+          </a>
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list nav-list">
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--white nav-list__link--active nav-list__link--active-white">Главная</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--white" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--white" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
