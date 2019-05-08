@@ -5,8 +5,8 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/oswaldregular2.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -18,20 +18,13 @@
     <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <svg class="page-header__logo-image--mobile" width="191px" height="38px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-mobile"></use>
-          </svg>
-          <svg class="page-header__logo-image--tablet" width="173px" height="58px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-tablet"></use>
-          </svg>
-          <svg class="page-header__logo-image--desktop" width="202px" height="59px">
-            <title>Логотип Cat Energy</title>
-            <use xlink:href="#icon-logo-desktop"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1260px)" srcset="img/icon-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icon-logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/icon-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          </picture>
         </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
@@ -183,7 +176,7 @@
         <div class="container">
           <div class="page-footer__bottom">
             <a class="page-footer__logo" href="index.html">
-              <svg width="128px" height="24px">
+              <svg width="128" height="24">
                 <title>Логотип Кэт Энерджи</title>
                 <use xlink:href="#icon-logo-footer"></use>
               </svg>
@@ -192,11 +185,11 @@
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vk" href="#">
-                    <svg class="social__icon social__icon--mobile" width="22px" height="12px">
+                    <svg class="social__icon social__icon--mobile" width="22" height="12">
                       <title>Кэт Энерджи в Вконтакте</title>
                       <use xlink:href="#icon-vk-mobile"></use>
                     </svg>
-                    <svg class="social__icon social__icon--desktop" width="30px" height="16px">
+                    <svg class="social__icon social__icon--desktop" width="30" height="16">
                       <title>Кэт Энерджи в Вконтакте</title>
                       <use xlink:href="#icon-vk"></use>
                     </svg>
@@ -204,11 +197,11 @@
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--insta" href="#">
-                    <svg class="social__icon social__icon--mobile" width="16px" height="16px">
+                    <svg class="social__icon social__icon--mobile" width="16" height="16">
                       <title>Кэт Энерджи в Инстаграме</title>
                       <use xlink:href="#icon-insta-mobile"></use>
                     </svg>
-                    <svg class="social__icon social__icon--desktop" width="23px" height="23px">
+                    <svg class="social__icon social__icon--desktop" width="23" height="23">
                       <title>Кэт Энерджи в Инстаграме</title>
                       <use xlink:href="#icon-insta"></use>
                     </svg>
@@ -216,11 +209,11 @@
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--fb" href="#">
-                      <svg class="social__icon social__icon--mobile" width="10px" height="19px">
+                      <svg class="social__icon social__icon--mobile" width="10" height="19">
                         <title>Кэт Энерджи в Фэйсбуке</title>
                         <use xlink:href="#icon-fb-mobile"></use>
                       </svg>
-                      <svg class="social__icon social__icon--desktop" width="14px" height="28px">
+                      <svg class="social__icon social__icon--desktop" width="14" height="28">
                         <title>Кэт Энерджи в Фэйсбуке</title>
                         <use xlink:href="#icon-fb"></use>
                       </svg>
@@ -230,7 +223,7 @@
             </div>
             <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
               HTML Academy
-              <svg class="page-footer__copyright-logo" width="42px" height="42px">
+              <svg class="page-footer__copyright-logo" width="42" height="42">
                 <title>Логотип HTML Academy</title>
                 <use xlink:href="#icon-htmlacademy"></use>
               </svg>
@@ -244,7 +237,6 @@
     <script src="js/menu.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=607372f8-5f3a-481d-a2d0-25e3ced98424"></script>
     <script src="js/map.js"></script>
-    <script src="js/cat-example.js"></script>
 
   </body>
 

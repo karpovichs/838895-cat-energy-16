@@ -81,8 +81,8 @@
   @media @tablet-width {
     flex-direction: row;
     justify-content: space-between;
-    align-items: top;
-    padding: 52px 0;
+    align-items: flex-start;
+    padding: 48px 0 54px;
   }
 }
 
@@ -104,6 +104,7 @@
   &:hover,
   &:focus {
     opacity: 0.8;
+    outline: none;
   }
 
   &:active {
@@ -141,6 +142,8 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     .page-footer__copyright-logo {
       fill: @green;
     }

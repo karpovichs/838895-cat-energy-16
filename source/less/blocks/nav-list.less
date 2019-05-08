@@ -20,7 +20,7 @@
   padding: 22px 0 25px;
 
   font-family: @font-oswald;
-  font-weight: 800;
+  font-weight: @medium-weight;
   font-size: 20px;
   line-height: 1em;
   color: @black;
@@ -31,6 +31,7 @@
   &:hover,
   &:focus {
     color: @black--hover;
+    outline: none;
   }
 
   &:active {
@@ -54,9 +55,9 @@
   }
 
   @media @tablet-width {
-    padding: 0 0 5px;
+    padding: 0 0 7px;
 
-    font-weight: 700;
+    font-weight: @regular-weight;
     font-size: 18px;
     line-height: 24.86px;
 
@@ -66,7 +67,7 @@
   }
 
   @media @desktop-width {
-    padding-bottom: 7px;
+    padding-bottom: 9px;
     font-size: 20px;
 
     &--white {
@@ -83,7 +84,27 @@
     }
 
     &--active-white {
-      border-bottom: 2px solid @white;
+      @media @desktop-width {
+        border-bottom: 2px solid @white;
+      }
+    }
+  }
+
+  &--active {
+    &:hover,
+    &:focus,
+    &:active {
+      color: @black;
+    }
+  }
+
+  &--active-white {
+    @media @desktop-width {
+      &:hover,
+      &:focus,
+      &:active {
+        color: @white;
+      }
     }
   }
 }

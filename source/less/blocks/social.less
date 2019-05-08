@@ -18,18 +18,26 @@
   }
 }
 
-.social__icon {
-  fill: #666666;
-
+.social__link {
   &:hover,
-  &focus {
-    fill: @green;
+  &:focus {
+    outline: none;
+
+    .social__icon {
+      fill: @green;
+    }
   }
 
   &:active {
-    fill: @green;
-    opacity: 0.3;
+    .social__icon {
+      fill: @green;
+      opacity: 0.3;
+    }
   }
+}
+
+.social__icon {
+  fill: #666666;
 
   &--mobile {
     @media @tablet-width {

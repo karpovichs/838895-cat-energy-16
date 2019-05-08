@@ -224,7 +224,7 @@
     min-width: 94px;
 
     @media @tablet-width {
-      min-width: 116px;
+      min-width: 118px;
     }
   }
 
@@ -343,7 +343,9 @@
 }
 
 .form__input--radio:hover + .form__label--radio::before,
-.form__input--checkbox:hover + .form__label--checkbox::before {
+.form__input--radio:focus + .form__label--radio::before,
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--checkbox:focus + .form__label--checkbox::before {
   border-color: #bababa;
 }
 
@@ -374,6 +376,7 @@
     padding-right: 49px;
 
     border: 2px solid @grey;
+    outline: none;
   }
 
   // Стиль для ошибки ввода

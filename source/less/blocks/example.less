@@ -53,6 +53,7 @@
   font-size: 36px;
   line-height: (60 / 36) * 1em;
   color: @black;
+  font-weight: @regular-weight;
 
   @media @tablet-width {
     margin: 0 0 41px;
@@ -128,6 +129,7 @@
   color: @black;
   text-transform: uppercase;
   text-align: center;
+  font-weight: @regular-weight;
 
   border: 1px solid #cdcdcd;
   border-radius: 2px;
@@ -211,7 +213,7 @@
     display: flex;
     flex-direction: column;
     width: 324px;
-    margin: 8px 0 0;
+    margin: 6px 0 0;
 
     text-align: right;
   }
@@ -219,6 +221,7 @@
   @media @desktop-width {
     flex-direction: row;
     justify-content: space-between;
+    width: 327px;
 
     text-align: left;
   }
@@ -230,6 +233,7 @@
   line-height: (20 / 14) * 1em;
   color: @black;
   text-transform: uppercase;
+  font-weight: @regular-weight;
 
   @media @tablet-width {
     margin-bottom: 1px;
@@ -301,11 +305,11 @@
 
   &:hover,
   &:focus {
-    color: @black--hover;
+    border-bottom: 1px solid #989898;
   }
 
   &:active {
-    color: @black--down;
+    border-color: transparent;
   }
 }
 
