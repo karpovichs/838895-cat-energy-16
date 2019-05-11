@@ -125,10 +125,12 @@
       </section>
 
       <section class="example">
-        <div class="container">
-          <div class="example__wrapper">
-            <div class="example__column">
-              <h2 class="example__title">Живой пример</h2>
+        <div class="example__header container">
+          <h2 class="example__title">Живой пример</h2>
+        </div>
+        <div class="example__content">
+          <div class="example__column-wrapper example__column-wrapper--text">
+            <div class="example__column example__column--text">
               <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
               <div class="example__features">
                 <ul class="example__list">
@@ -147,35 +149,39 @@
                 </div>
               </div>
             </div>
-            <div class="example__column">
+          </div>
+          <div class="example__column-wrapper example__column-wrapper--cat">
+            <div class="example__column example__column--cat">
               <div class="example__image-wrapper">
-                  <picture class="example__image example__image--before">
+                <div class="example__image example__image--before">
+                  <picture>
                     <source type="image/webp" media="(min-width: 1260px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
                     <source media="(min-width: 1260px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                    <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
+                    <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Борис до">
                   </picture>
-                <picture class="example__image example__image--after example__image--hidden">
-                  <source type="image/webp" media="(min-width: 1260px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                </div>
+                <div class="example__image example__image--after">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1260px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1260px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="example__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Борис после">
-                </picture>
+                    <source media="(min-width: 1260px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                    <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Борис после">
+                  </picture>
+                </div>
               </div>
               <div class="example__toggle">
                 <button class="example__toggle-label example__toggle-label--before">Было</button>
-                <!-- toggle -->
                 <div class="example__scale">
                   <div class="example__bar"></div>
                   <div class="example__control"></div>
                 </div>
-
                 <button class="example__toggle-label example__toggle-label--after">Стало</button>
               </div>
             </div>
@@ -197,16 +203,18 @@
           </div>
         </div>
       </div>
-      <div class="page-footer__map" id="map">
-        <picture class="page-footer__map-image page-footer__map-image--nojs">
-          <source type="image/webp" media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+      <div class="page-footer__map page-footer__map--nojs" id="map">
+        <div class="page-footer__map-image page-footer__map-image--nojs">
+          <picture>
+            <source type="image/webp" media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </picture>
+            <source media="(min-width: 1260px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png" alt="Адрес Кэт Энерджи: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
+        </div>
       </div>
       <div class="page-footer__wrapper">
         <div class="container">
